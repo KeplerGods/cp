@@ -3,13 +3,16 @@
  *  
  *  版本    作者        时间           邮箱                描述
  * =============================================================
- * v1.0   李金泽   2019年6月2日  lijinze@beixing360.com     初版
+ * v1.0   李金泽   2019年6月2日  ljz1318078262@163.com     初版
  * =============================================================
  * */
 package com.ai8s.cp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
+
+import com.ai8s.cp.util.SpringUtil;
 
 /**
  * @author Aaron
@@ -18,6 +21,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class CPApp {
 	public static void main(String[] args) {
-		SpringApplication.run(CPApp.class, args);
+		ConfigurableApplicationContext application = SpringApplication.run(CPApp.class, args);
+		SpringUtil.init(application);
 	}
 }
