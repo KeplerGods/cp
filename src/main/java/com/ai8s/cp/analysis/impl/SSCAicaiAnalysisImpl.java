@@ -8,9 +8,13 @@
  * */
 package com.ai8s.cp.analysis.impl;
 
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
 import com.ai8s.cp.analysis.IAnalysis;
+import com.ai8s.cp.bean.CPResult;
+import com.ai8s.cp.bean.CPViewBean;
 
 /**
  * @author Aaron
@@ -18,5 +22,15 @@ import com.ai8s.cp.analysis.IAnalysis;
  */
 @Service
 public class SSCAicaiAnalysisImpl implements IAnalysis {
+
+	@Override
+	public CPResult<List<CPViewBean>> analysis() {
+		return analysis(0, 0);
+	}
+
+	@Override
+	public CPResult<List<CPViewBean>> analysis(int startDay, int endDay) {
+		return new CPResult<>();
+	}
 
 }
